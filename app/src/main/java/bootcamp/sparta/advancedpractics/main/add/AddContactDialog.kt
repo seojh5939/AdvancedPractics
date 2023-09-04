@@ -1,4 +1,4 @@
-package bootcamp.sparta.advancedpractics.main
+package bootcamp.sparta.advancedpractics.main.add
 
 import androidx.fragment.app.DialogFragment
 

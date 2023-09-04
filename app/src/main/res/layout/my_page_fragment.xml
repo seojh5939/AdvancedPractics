@@ -1,14 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mypage.MyPageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".mypage.MyPageFragment">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/shape_image_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_image"
+            tools:text="Godfred Asamoah" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail_container_phone"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_name">
+
+            <TextView
+                android:id="@+id/detail_phone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="전화번호"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_phone_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightGray"
+                tools:text="+2332471729" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail_container_email"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_container_phone">
+
+            <TextView
+                android:id="@+id/detail_email_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="이메일"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_email_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightGray"
+                tools:text="asamoahgodfred42@gmail.com" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail_container_birth"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_container_email">
+
+            <TextView
+                android:id="@+id/detail_birth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="생년월일"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_birth_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightGray"
+                tools:text="2023년 8월 1일" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail_container_nick"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_container_birth">
+
+            <TextView
+                android:id="@+id/detail_nick_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="별명"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_nick_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightGray"
+                tools:text="연락함죠" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
