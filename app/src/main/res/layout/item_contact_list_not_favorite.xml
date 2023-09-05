@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_not_icon_favorite"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/baseline_star_border_24"
+        app:layout_constraintBottom_toBottomOf="@+id/item_not_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_not_image" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_not_icon_call"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="@+id/item_not_image"
+        app:layout_constraintStart_toEndOf="@+id/item_not_icon_favorite"
+        app:layout_constraintTop_toTopOf="@+id/item_not_image" />
+
+    <TextView
+        android:id="@+id/item_not_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/item_not_phone"
+        app:layout_constraintEnd_toStartOf="@+id/item_not_image"
+        app:layout_constraintStart_toEndOf="@+id/item_not_icon_call"
+        app:layout_constraintTop_toTopOf="@+id/item_not_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="My Crush" />
+
+    <TextView
+        android:id="@+id/item_not_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_not_image"
+        app:layout_constraintEnd_toEndOf="@id/item_not_name"
+        app:layout_constraintStart_toStartOf="@+id/item_not_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_not_name"
+        tools:text="08093939487" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_not_image"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_margin="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular"
+        tools:src="@drawable/cat_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

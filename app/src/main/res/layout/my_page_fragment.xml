@@ -12,37 +12,41 @@
         android:layout_height="match_parent"
         tools:context=".mypage.MyPageFragment">
 
-        <ImageView
-            android:id="@+id/detail_image"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mypage_image"
             android:layout_width="0dp"
             android:layout_height="230dp"
-            android:backgroundTint="@color/black"
-            android:background="@drawable/shape_image_border"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat_1"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/detail_name"
+            android:id="@+id/mypage_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:layout_margin="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_image"
-            tools:text="Godfred Asamoah" />
+            app:layout_constraintTop_toBottomOf="@+id/mypage_image"
+            android:text="Godfred Asamoah" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/detail_container_phone"
+            android:id="@+id/mypage_container_phone"
             android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_name">
+            app:layout_constraintTop_toBottomOf="@+id/mypage_name">
 
             <TextView
-                android:id="@+id/detail_phone_title"
+                android:id="@+id/mypage_phone_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -53,28 +57,43 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detail_phone_content"
+                android:id="@+id/mypage_phone_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/lightGray"
-                tools:text="+2332471729" />
+                android:text="+2332471729" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mypage_call_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/call_icon"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mypage_message_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/message_icon"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="55dp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/detail_container_email"
+            android:id="@+id/mypage_container_email"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_container_phone">
+            app:layout_constraintTop_toBottomOf="@+id/mypage_container_phone">
 
             <TextView
-                android:id="@+id/detail_email_title"
+                android:id="@+id/mypage_email_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -85,28 +104,35 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detail_email_content"
+                android:id="@+id/mypage_email_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/lightGray"
-                tools:text="asamoahgodfred42@gmail.com" />
+                android:text="asamoahgodfred42@gmail.com" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mypage_email_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mail_icon"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/detail_container_birth"
+            android:id="@+id/mypage_container_birth"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_container_email">
+            app:layout_constraintTop_toBottomOf="@+id/mypage_container_email">
 
             <TextView
-                android:id="@+id/detail_birth_title"
+                android:id="@+id/mypage_birth_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -117,28 +143,28 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detail_birth_content"
+                android:id="@+id/mypage_birth_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/lightGray"
-                tools:text="2023년 8월 1일" />
+                android:text="2023년 8월 1일" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/detail_container_nick"
+            android:id="@+id/mypage_container_nick"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_container_birth">
+            app:layout_constraintTop_toBottomOf="@+id/mypage_container_birth">
 
             <TextView
-                android:id="@+id/detail_nick_title"
+                android:id="@+id/mypage_nick_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -149,14 +175,14 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detail_nick_content"
+                android:id="@+id/mypage_nick_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/lightGray"
-                tools:text="연락함죠" />
+                android:text="연락함죠" />
 
         </androidx.cardview.widget.CardView>
 
